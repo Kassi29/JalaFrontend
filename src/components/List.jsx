@@ -13,7 +13,7 @@ class List extends Component {
   };
 
   render() {
-    const { list = {}, lists, onDeleteWorkItem } = this.props;
+    const { list = {}, lists, onDeleteWorkItem, updateWorkItem } = this.props;
     const workItems = list.workItems || [];
     const hasWorkItems = workItems.length > 0;
     return (
@@ -30,6 +30,7 @@ class List extends Component {
               listId={list.kanbanListId}
               lists={lists}
               onDeleteWorkItem={onDeleteWorkItem}
+              updateWorkItem={updateWorkItem}
             />
           ))}
         </div>

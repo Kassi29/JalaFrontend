@@ -33,6 +33,23 @@ class Application extends Component {
       );
   };
 
+  updateWorkItem = async (workItemId, kanbanListId) => {
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_KANBAN_BOARD_API}/workitems/${workItemId}/${kanbanListId}`,
+        {
+          method: 'PATCH',
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to update WorkItem's kanban list ");
+      }
+      this.fetchKanbanLists();
+    } catch (error) {
+      console.log('Error to update: ', error);
+    }
+  };
+
   deleteWorkItem = (workItemId) => {
     fetch(`${process.env.REACT_APP_KANBAN_BOARD_API}/workitems/${workItemId}`, {
       method: 'DELETE',
@@ -94,7 +111,11 @@ class Application extends Component {
         </header>
         <main className="Application">
           <section>
-            <Lists lists={lists} onDeleteWorkItem={this.deleteWorkItem} />
+            <Lists
+              lists={lists}
+              onDeleteWorkItem={this.deleteWorkItem}
+              updateWorkItem={this.updateWorkItem}
+            />
           </section>
         </main>
         <footer className="Footer">

@@ -17,11 +17,16 @@ class WorkItem extends Component {
   };
 
   render() {
-    const { workItem = {}, lists = [], onDeleteWorkItem } = this.props;
+    const {
+      workItem = {},
+      lists = [],
+      onDeleteWorkItem,
+      updateWorkItem,
+    } = this.props;
     const { listId } = this.state;
 
     const saveWorkItem = () => {
-      // should update a work item
+      updateWorkItem(workItem.workItemId, listId);
     };
 
     const deleteWorkItem = () => {
