@@ -29,7 +29,9 @@ class WorkItem extends Component {
     };
     return (
       <article className="WorkItem">
-        <h3>{workItem.title} </h3>
+        <h3>
+          {workItem.title} | {workItem.workItemId}
+        </h3>
         <div className="WorkItem-description">{workItem.description}</div>
         <div className="WorkItem-options">
           <select
