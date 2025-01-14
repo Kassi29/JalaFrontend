@@ -27,12 +27,6 @@ class WorkItem extends Component {
     const deleteWorkItem = () => {
       onDeleteWorkItem(Math.random());
     };
-
-    if (workItem.kanbanListId === 2) {
-      // Removing the filter for kanbanList == 2
-      return <div></div>;
-    }
-
     return (
       <article className="WorkItem">
         <h3>{workItem.title} </h3>
