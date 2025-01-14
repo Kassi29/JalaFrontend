@@ -1,0 +1,537 @@
+html,
+body,
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: rgb(0, 121, 191);
+}
+body,
+input {
+  color: #283d3b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+select {
+  border-radius: 0;
+  color: #283d3b;
+  padding: 0.2em;
+}
+.WorkItem-move {
+  flex: 2;
+  height: 45px;
+
+}
+option {
+  padding: 1em;
+}
+input {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+}
+input html,
+input body,
+input * {
+  box-sizing: border-box;
+}
+input body {
+  margin: 0;
+}
+input body,
+input input {
+  color: #283d3b;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+input code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+input select {
+  border-radius: 0;
+  color: #283d3b;
+  margin: 1em 0;
+  padding: 1em;
+  width: 100%;
+}
+input option {
+  padding: 1em;
+}
+input input {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+}
+input input:focus {
+  background-color: #fff;
+}
+input button,
+input input[type='submit'] {
+  background-color: #c6d8d3;
+  /* border: 1px solid #a8c3bc; */
+  margin: 0.5em 0;
+  outline: none;
+  padding: 0.5em;
+  /* width: 100%; */
+}
+input button:focus,
+input input[type='submit']:focus {
+  background-color: #ccdcd8;
+}
+input button:hover,
+input input[type='submit']:hover {
+  background-color: #d5e2df;
+}
+input button:active,
+input input[type='submit']:active {
+  background-color: #b7cec7;
+}
+input button:disabled,
+input input[type='submit']:disabled {
+  background-color: #e4edea;
+  border-color: #c6d8d3;
+  color: #283d3b;
+}
+input button.danger,
+input input[type='submit'].danger {
+  background-color: #f0544f;
+  border: 1px solid #ec2620;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+}
+input button.danger:focus,
+input input[type='submit'].danger:focus {
+  background-color: #f15d58;
+}
+input button.danger:hover,
+input input[type='submit'].danger:hover {
+  background-color: #f26b66;
+}
+input button.danger:active,
+input input[type='submit'].danger:active {
+  background-color: #ee3d38;
+}
+input button.danger:disabled,
+input input[type='submit'].danger:disabled {
+  background-color: #f4827e;
+  border-color: #f0544f;
+  color: #f0544f;
+}
+input .Application {
+  display: flex;
+  margin: 0.5em;
+}
+input .toggle-options {
+  background-color: #ebecf0;
+  border: 1px solid #fbdfa4;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+  color: #c98b0a;
+}
+input .toggle-options:focus {
+  background-color: #fdf3df;
+}
+input .toggle-options:hover {
+  background-color: #fef9ed;
+}
+input .toggle-options:active {
+  background-color: #fce7bd;
+}
+input .toggle-options:disabled {
+  background-color: #fff;
+  border-color: #ebecf0;
+  color: #ebecf0;
+}
+input .WorkItem {
+  background-color: #fef9ed;
+  border: 1px solid #fad68c;
+  margin: 0.5em;
+  padding: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+input .WorkItem h3 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+input .WorkItem-description {
+  margin: 1em 0;
+}
+input .WorkItem-toggle {
+  background-color: #fef9ed;
+  border: 1px solid #fce7bd;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+  color: #e29c0b;
+}
+input .WorkItem-toggle:focus {
+  background-color: #fffcf7;
+}
+input .WorkItem-toggle:hover {
+  background-color: #fff;
+}
+input .WorkItem-toggle:active {
+  background-color: #ebecf0;
+}
+input .WorkItem-toggle:disabled {
+  background-color: #fff;
+  border-color: #fef9ed;
+  color: #fef9ed;
+}
+input .CreateWorkItem-title,
+input .CreateWorkItem-submit {
+  margin-bottom: 0.5em;
+}
+input .CreateWorkItem-submit {
+  background-color: #bbb;
+}
+input .CreateList {
+  background-color: #ebecf0;
+  display: flex;
+  margin-bottom: 1em;
+  min-width: 400px;
+  padding: 0.5em;
+  width: 100%;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+input .CreateList-title,
+input .CreateList-submit {
+  padding: 1em;
+}
+input .CreateList-title {
+  background-color: #fef9ed;
+  width: 100%;
+  flex: 5;
+}
+input .CreateList-submit {
+  flex: 1;
+}
+input .List {
+  background-color: #ebecf0;
+  border: 1px solid #fbdfa4;
+  height: 100%;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: 250px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+input .Lists {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+input:focus {
+  background-color: #fff;
+}
+button,
+input[type='submit'] {
+  background-color: #c6d8d3;
+  border: 1px solid #a8c3bc;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 0.5em;
+  /* width: 100%; */
+}
+button:focus,
+input[type='submit']:focus {
+  background-color: #ccdcd8;
+}
+button:hover,
+input[type='submit']:hover {
+  background-color: #d5e2df;
+}
+button:active,
+input[type='submit']:active {
+  background-color: #b7cec7;
+}
+button:disabled,
+input[type='submit']:disabled {
+  background-color: #e4edea;
+  border-color: #c6d8d3;
+  color: #6c965b;
+}
+button.danger,
+input[type='submit'].danger {
+  background-color: #f0544f;
+  border: 1px solid #ec2620;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+}
+button.danger:focus,
+input[type='submit'].danger:focus {
+  background-color: #f15d58;
+}
+button.danger:hover,
+input[type='submit'].danger:hover {
+  background-color: #f26b66;
+}
+button.danger:active,
+input[type='submit'].danger:active {
+  background-color: #ee3d38;
+}
+button.danger:disabled,
+input[type='submit'].danger:disabled {
+  background-color: #f4827e;
+  border-color: #f0544f;
+  color: #f0544f;
+}
+button.success,
+input[type='submit'].success {
+  background-color: #6c965b;
+  border: 1px solid #6c965b;
+  color: #FFF;
+  font-weight: bold;
+  margin:  0 0 0 0.5em;
+  outline: none;
+  padding: 1em;
+  cursor: pointer;
+}
+button.success:focus,
+input[type='submit'].success:focus {
+  background-color: #6c965b;
+}
+button.success:hover,
+input[type='submit'].success:hover {
+  background-color: #6c965b;
+}
+button.success:active,
+input[type='submit'].success:active {
+  background-color: #6c965b;
+}
+button.success:disabled,
+input[type='submit'].success:disabled {
+  background-color: #6c965b;
+  border-color: #6c965b;
+  color: #6c965b;
+}
+.Header > h1{
+  text-align: center;
+  color: #FFF;
+}
+.Footer > h2 {
+  width: 100%;
+  /* background-color: #FFF; */
+  color: #b7cec7;
+  padding: 10px;
+  text-align: center;
+}
+.Application {
+  display: flex;
+  margin: 20px auto 0;
+  width: 860px;
+}
+.toggle-options {
+  background-color: #ebecf0;
+  border: 1px solid #fbdfa4;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+  color: #c98b0a;
+}
+.toggle-options:focus {
+  background-color: #fdf3df;
+}
+.toggle-options:hover {
+  background-color: #fef9ed;
+}
+.toggle-options:active {
+  background-color: #fce7bd;
+}
+.toggle-options:disabled {
+  background-color: #fff;
+  border-color: #ebecf0;
+  color: #ebecf0;
+}
+.error {
+  width: 300px;
+  color: #FFF;
+  margin: 20px auto 0;
+  padding: 0.5em;
+  text-align: center;
+  background-color: #f0544f;
+}
+.loading {
+  width: 300px;
+  color: #FFF;
+  font-weight: bold;
+  margin: 20px auto 0;
+  padding: 0.5em;
+  text-align: center;
+}
+.WorkItem {
+  background-color: #FFF;
+  border: 1px solid #FFF;
+  margin: 0.5em 0;
+  padding: 1em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.WorkItem h3 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+.WorkItem-options {
+  display: flex;
+  flex-direction: row;
+}
+.WorkItem-description {
+  margin: 1em 0;
+}
+.WorkItem-toggle {
+  background-color: #fef9ed;
+  border: 1px solid #fce7bd;
+  margin: 0.5em 0;
+  outline: none;
+  padding: 1em;
+  width: 100%;
+  color: #e29c0b;
+}
+.WorkItem-toggle:focus {
+  background-color: #fffcf7;
+}
+.WorkItem-toggle:hover {
+  background-color: #fff;
+}
+.WorkItem-toggle:active {
+  background-color: #ebecf0;
+}
+.WorkItem-toggle:disabled {
+  background-color: #fff;
+  border-color: #fef9ed;
+  color: #fef9ed;
+}
+.WorkItem-button {
+  flex: 1;
+  margin: 0;
+}
+.WorkItem-button.delete {
+  background-color: #f0544f;
+  color: #FFF;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.CreateWorkItem {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #ebecf0;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.CreateWorkItem-title,
+.CreateWorkItem-submit {
+  margin-bottom: 0.5em;
+}
+.CreateWorkItem-submit {
+  background-color: #bbb;
+}
+.CreateList {
+  background-color: #ebecf0;
+  display: flex;
+  margin-bottom: 1em;
+  min-width: 400px;
+  padding: 0.5em;
+  width: 100%;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.CreateList-title,
+.CreateList-submit {
+  padding: 1em;
+}
+.CreateList-title {
+  background-color: #fef9ed;
+  width: 100%;
+  flex: 5;
+}
+.CreateList-submit {
+  flex: 1;
+}
+.List {
+  background-color: #ebecf0;
+  border: 1px solid #fbdfa4;
+  height: 100%;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: 270px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  min-height: 300px;
+}
+.List-info {
+  text-align: center;
+  color: #283d3b
+}
+.List h2 {
+  margin: 0px;
+  font-size: 1.3em;
+}
+.Lists {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.User {
+  border: 1px solid #ebecf0;
+  display: flex;
+  font-size: 0.6em;
+  margin-bottom: 1em;
+  overflow-y: scroll;
+  padding: 0.5em;
+  width: 100%;
+}
+.User img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.User-picture {
+  border: 1px solid #ebecf0;
+  margin-right: 0.5em;
+}
+.User-picture img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.Users {
+  background-color: #fef9ed;
+  border: 1px solid #fce7bd;
+  height: 100%;
+  margin-right: 1em;
+  min-width: 300px;
+  padding: 1em;
+  width: 300px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.Users h2 {
+  border-bottom: 5px solid #fce7bd;
+  color: #805906;
+  display: block;
+  margin-top: 0;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
