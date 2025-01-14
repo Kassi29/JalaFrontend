@@ -30,7 +30,7 @@ class WorkItem extends Component {
     };
 
     const deleteWorkItem = () => {
-      onDeleteWorkItem(Math.random());
+      onDeleteWorkItem(workItem.workItemId);
     };
     return (
       <article className="WorkItem">
